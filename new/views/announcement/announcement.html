@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公告主页</title>
+</head>
+<body  ng-app='myApp'>
+    <h1>公告首页</h1>
+    <table ng-controller="announcementController">
+        <tr>
+            <th>公告名称</th>
+            <th>发布人</th>
+            <th>发布时间</th>
+            <th>附件</th>
+            <th>操作</th>
+        </tr>
+        <tr ng-repeat="ann in anns" ng-controller="DelController" >
+            <td class="title">{{ann.title}}</td>
+            <td>{{ann.byAuthor}}</td>
+            <td>{{ann.startTime}}</td>
+            <td>{{ann.append}}</td>
+            <td>
+                <a href="/announcement/view?title={{ann.title}}">查看</a>
+                <a href="javascript:void(0)" class="Del">删除</a>
+            </td>
+        </tr>
+    </table>
+
+<script src="/public/javascripts/jquery-1.9.1.js"></script>
+<script src="/public/javascripts/angular.js"></script>
+<script src="/public/javascripts/announcement.js"></script>
+</body>
+</html>

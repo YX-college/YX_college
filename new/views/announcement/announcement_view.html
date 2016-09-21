@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公告详细内容</title>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="view_controller">
+        <h2 id="title"><%= title %></h2>
+        <p>{{ann.byAuthor}}</p>
+        <p>{{ann.content}}</p>
+    </div>
+<script src="/public/javascripts/angular.js"></script>
+<script src="/public/javascripts/announcement_view.js"></script>
+</body>
+</html>
